@@ -1,0 +1,60 @@
+<div class="header">
+	<div class="container">
+	  <div class="row">
+	    <div class="col-md-5">
+	      <div class="logo">
+	        <h1><a href="index.html">CRM</a></h1>
+	      </div>
+	    </div>
+	    <div class="col-md-5">
+	      <div class="row">
+	        <div class="col-lg-12">
+	          Dodatkowa treść
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-2">
+	      <div class="navbar navbar-inverse" role="banner">
+	        <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+	          <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Profile
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Delete</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+	        </nav>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+<div class="page-content">
+  <div class="row">
+		<div class="col-lg-2">
+		  <div class="sidebar content-box" style="display: block;">
+        <ul class="nav">
+          <li><a (click)="loadModuleCompanies($event)"><i class="glyphicon glyphicon-briefcase"></i> Companies</a></li>
+          <li><a (click)="loadModuleUsers($event)"><i class="glyphicon glyphicon-user"></i> Users</a></li>
+        </ul>
+      </div>
+		</div>
+		<div class="col-lg-10">
+
+      <companies-list *ngIf="selected == 'companies'"></companies-list>
+      <users-list *ngIf="selected == 'users'"></users-list>
+      
+		</div>
+	</div>
+</div>
+
+<footer>
+  <div class="container"> 
+    <div class="copy text-center">
+      Copyright 2017 <a href='#'>CRM</a>
+    </div>
+  </div>
+</footer>
